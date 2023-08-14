@@ -18,6 +18,7 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/swc-jest.config.cjs',
   },
+  transformIgnorePatterns: ['/node_modules/(?!@babel/runtime|ky)'],
   setupFilesAfterEnv: ['<rootDir>/src/setup-test.ts'],
   coverageThreshold: {
     global: {
