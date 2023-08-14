@@ -1,7 +1,8 @@
 import ky, { Options } from 'ky';
 import { CreateInstance, ErrorApi } from './api.type';
+import { config } from './config';
 
-class ApiService {
+export class ApiService {
   constructor(private defaultOptions: Options) {}
 
   createInstance(): CreateInstance {
@@ -60,4 +61,3 @@ class ApiService {
   }
 }
 
-module.exports = ApiService;
